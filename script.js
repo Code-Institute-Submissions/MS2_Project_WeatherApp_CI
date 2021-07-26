@@ -2,19 +2,20 @@ const searchButton = document.querySelector('.searchButton');
 const infoCard = document.querySelector('.infoCard');
 
 searchButton.addEventListener('click', (e) => {
-    let input = document.querySelector('.userInput').value;
+    let input = document.getElementById('userInput');
     let xhr = new XMLHttpRequest();
     
-    //test api 1 ok, test api 2 fail
+   //api test ok, responses ok
 
-    xhr.open('GET', 'https://=${input}');
+    xhr.open('GET', `https://pokeapi.co/api/v2/pokemon/${input.value}/`);
     xhr.onreadystatechange = function() {
         if(this.readyState === XMLHttpRequest.DONE && this.status == 200) {
             let response = JSON.parse(this.response);
             infoCard.innerHTML = `
             <div> 
-            <h1>${response.data.item}</h1>
-            <h2>${response.data.item}</h2>           
+            <img src="${response.sprites.other.dream_world.front_default}">
+            <h1>${response.forms[0].name}</h1>
+            <h2>${response.weight}</h2>           
             </div>
             `
         }
