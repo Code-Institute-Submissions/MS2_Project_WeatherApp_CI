@@ -16,13 +16,14 @@ searchButton.addEventListener('click', (e) => {
             <h3>${Math.floor(response.main.temp)} °C </h3>          
             <h5 class="text-muted">${response.weather[0].main}</h5>
             </div>
-            `
-        } //else {
-            //console.log('error');
-           // alert('Please type in correct city name'); // if not city name entered, error alert is generated
-        //} //
-        document.getElementById('userInput').value = ""; // this line clears the input box after submit
-    }
-    xhr.send();
+            `      
+             
+        } else if (this.readyState === XMLHttpRequest.DONE && this.status == 404){
+            alert (`You typed: ${input.value}. Please type in a city name.`) // Alerts if wrong input, ie no city written. Fixed now. 
+        } 
+        document.getElementById('userInput').value = ""; // Clears input box from typed name after search performed
+        
+    } 
+     xhr.send();
     
 })
