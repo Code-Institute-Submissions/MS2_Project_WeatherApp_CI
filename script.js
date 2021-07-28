@@ -13,7 +13,7 @@ searchButton.addEventListener('click', (e) => {
             <div>
             <img src="http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png">
             <h2>${response.name}</h2>  
-            <h3>${response.main.temp} °C </h3>          
+            <h3>${Math.floor(response.main.temp)} °C </h3>          
             <h5 class="text-muted">${response.weather[0].main}</h5>
             </div>
             `
