@@ -19,7 +19,7 @@ searchButton.addEventListener('click', (e) => {
             `      
              
         } else if (this.readyState === XMLHttpRequest.DONE && this.status == 404){
-            alert (`You typed: ${input.value}. Please type in a city name.`) // Alerts if wrong input, ie no city written. Fixed now. 
+            alert ('Incorrect city name. Please type in a city name.'); // Alerts if wrong input, ie no city written. Fixed now. 
         } 
         document.getElementById('userInput').value = ""; // Clears input box from typed name after search performed
         
