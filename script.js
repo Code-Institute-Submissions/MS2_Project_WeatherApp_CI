@@ -6,6 +6,7 @@ searchButton.addEventListener('click', (e) => {
     let xhr = new XMLHttpRequest();
     
     xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=191d5fa7b2969d0320a7c9e00936f23c&units=metric`);
+    xhr.timeout = 2000;
     xhr.onreadystatechange = function() {
         if(this.readyState === XMLHttpRequest.DONE && this.status == 200) {
             let response = JSON.parse(this.response);
@@ -19,11 +20,15 @@ searchButton.addEventListener('click', (e) => {
             `      
              
         } else if (this.readyState === XMLHttpRequest.DONE && this.status == 404){
-            alert ('Incorrect city name. Please type in a city name.'); // Alerts if wrong input, ie no city written. Fixed now. 
+            alert ('Incorrect city name. Please type in a city name.'); // Alerts if wrong input, bad request. 
+        } else if (this.readyState === XMLHttpRequest.DONE && this.status == 400){
+            alert ('Please type in a city name.'); // Alerts if no input in the text field, bad request. 
         } 
+
         document.getElementById('userInput').value = ""; // Clears input box from typed name after search performed
         
-    } 
+    }
+
      xhr.send();
     
 })

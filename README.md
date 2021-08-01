@@ -52,7 +52,8 @@ Features include: landing page, searchbox, result weather infocard, alert error,
 
   - User has the opportunity to submit a contact request form with the help of EmailJS service. 
   - Required submission parametres include name, email and message. Email service the set up at EmailJS, receiving the submitted message from user. 
-  - To use EmailJS as a service, sign up is required. 
+  - Autoreply from EmailJS set up, sending an email to user that the email has been received, and that the WeatherApp team will get back to you as soon as possible.
+  - To use EmailJS as a service, individual sign up is required. Follow 
 
   ![Contact](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(182).png)
 
@@ -130,6 +131,7 @@ References:
 - Instructions on correct math.round syntax for rendered temperature from [Alan](https://alan.app/docs/server-api/built-in-javascript-libraries).
 - Instructions on "document.getElementById results to null even if API call successful" fix ( move script from top to near end of body tag) from [Stackoverflow](https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null)
 - The icons in the search results from [Openweathermap](https://openweathermap.org/weather-conditions)
+-EmailJS: email services for automated email services and auto-reply, [EmailJS](https://www.emailjs.com/)
 - Code Institute Diploma in Software Development modules Javascript Essentials and Interactive Front End Development, generally all lessons in these modules, for learning about vanilla JavaScript, jQuery and working with external resources such as APIs. 
 
 ### Media
