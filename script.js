@@ -27,3 +27,23 @@ searchButton.addEventListener('click', (e) => {
      xhr.send();
     
 })
+
+function sendMail(contactForm) {
+    emailjs.send("service_mdebkg7", "template_ripcuy9", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
+        "message": contactForm.messageTxt.value
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("FAILED", error);
+        }
+    ); 
+    document.getElementById('fullname').value = "";     // clear fields after submission
+    document.getElementById('emailaddress').value = "";
+    document.getElementById('message').value = "";
+    return false;  
+} 

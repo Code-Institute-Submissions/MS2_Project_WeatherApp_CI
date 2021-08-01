@@ -19,6 +19,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
+ <!--Script tag for EmailJS below-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+  (function() {
+  emailjs.init("user_0pImqIAkgXkl9tgKeWWUK");
+  })();
+  </script>
+
   <!--Script tag for script file at the bottom of body tag-->
 
   <!-- Custom styles for this template -->
@@ -60,39 +68,34 @@
                 <div class="infoCard"></div>
               </div> 
               <div class="card-body container"> 
-                <input id="userInput" class="form-control mr-sm-2" placeholder="Type in city name" name="userSearch" type="search" aria-label="Search">
+                <input id="userInput" class="form-control mr-sm-2" placeholder="Type in city name" name="userSearch" type="search" aria-label="Search" required/>
                 <br> 
                 <button class="searchButton btn btn-primary">Click here to search</button>
               </div>    
             </div>        
         </div> 
       </div>       
-    </main>
     <!--End of section for searchbox and weather for infocard--> 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <form method="post">
-          <h3>Questions? Contact Us Below</h3>
-          <br>
-         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-              <div class="col mx-auto">
-                  <div class="form-group">
-                      <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
-                  </div>
-                  <div class="form-group">
-                      <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
-                  </div>
-                  <div class="form-group">
-                      <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
-                  </div>
+      <p class="fs-5 text-muted">Questions? Send us a Message </p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col mx-auto">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-body container"> 
+                <form onsubmit="return sendMail(this);">
+                  <input type="text" name="name" class="form-control mr-sm-2" id="fullname" placeholder="Name" required/>
+                  <input type="text" name="emailaddress" class="form-control mr-sm-2" id="emailaddress" placeholder="Email" required/>
+                  <textarea rows="5" name="messageTxt" class="form-control mr-sm-2" id="message" placeholder="Message" required></textarea>
                   <br>
-                  <div class="form-group">
-                      <input type="submit" name="btnSubmitEmailJS" class="btnContactJS" value="Send Message" />
-                  </div> 
-                  </div>
-          </div>
-      </form>
-</div>
-
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+              </div>    
+            </div>        
+        </div> 
+      </div>           
+  </div>
+</main>
     <!--Footer-->
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
