@@ -4,6 +4,8 @@ This project aims to provide any user with a quick service to search for current
 
 The overall website look and feel is kept crispy and simple, as the main aim is to provide weather information in a weather card after the user has submitted a cityname via the searchbox. 
 
+User also has an opportunity to submit a contact form to the developers of this website if they have any questions, which utilises EmailJS service. 
+
 API calls in this project were made using XHR XMLHttpRequest. Whilst this method is now older, and there are newer methods such as Fetch() which can be used, for the purpose of this project and my personal learning outcome the older XMLHttpRequest method was used, and a general purpose was to keep the script code as short and simple as possible, whilst maintaining and ensuring full functionality. The XMLHttpRequest method does have its limitations but there might also be instances where this method would be the preferred option, for more information on this method please visit ![JavaScriptInfo](https://javascript.info/xmlhttprequest#the-basics) or another resource of your choice. 
 
 This project has been created to be submitted as a milestone project 2 for CodeInstitute's Diploma in Software Development course. 
@@ -12,7 +14,7 @@ This project has been created to be submitted as a milestone project 2 for CodeI
 
 ## Features 
 
-Features include: landing page, searchbox, result weather infocard, alert error and a footer. Each feature is presented in detail in the sections below. 
+Features include: landing page, searchbox, result weather infocard, alert error, contact form using EmailJS and a footer. Each feature is presented in detail in the sections below. 
 
 ### Existing Features
 
@@ -46,9 +48,17 @@ Features include: landing page, searchbox, result weather infocard, alert error 
 
 ![Result](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(Result).png)
 
+- __Contact Form section__
+
+  - User has the opportunity to submit a contact request form with the help of EmailJS service. 
+  - Required submission parametres include name, email and message. Email service the set up at EmailJS, receiving the submitted message from user. 
+  - To use EmailJS as a service, sign up is required. 
+
+  ![Contact](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(182).png)
+
 - __The Footer__ 
 
-  - The footer section includes links to the Openweathermap site, provider of the API service and a link to GitHub webpage. Anyone hoping to replicate this project is strongly recommended and instructed to sign up and get their own key, as this is a requirement from Openweathermap that all keys are personal. Find out more and how to do this here: ![Openweathermap] (https://openweathermap.org/api). There is a option to sign up for a free service.
+  - The footer section includes links to the Openweathermap site, provider of the API service and a link to GitHub webpage. Anyone hoping to replicate this project is strongly recommended and instructed to sign up and get their own key, as this is a requirement from Openweathermap that all keys are personal. Find out more and how to do this here: [Openweathermap](https://openweathermap.org/api). There is a option to sign up for a free service.
   - The footer's purpose is to provide additional resources should the user wish to gain more information about this project and its resources used. 
   - Disclaimer section: as this project has been created for a school/educational purposes only, the user is informed to seek accurate data from other sources also, and not only to rely on this app.
    
@@ -116,10 +126,10 @@ References:
 ### Content 
 
 - Template Bootstrap [Bootstrap](https://getbootstrap.com/docs/4.0/examples/).
-- API Service and key from ![Openweathermap] (https://openweathermap.org/api). For anyone replicating or looking to make their own project it is required that you sign up to the service (choose free subscription) and get your own key from the provider. Follow link above. 
+- API Service and key from [Openweathermap](https://openweathermap.org/api). For anyone replicating or looking to make their own project it is required that you sign up to the service (choose free subscription) and get your own key from the provider. Follow link above. 
 - Instructions on correct math.round syntax for rendered temperature from [Alan](https://alan.app/docs/server-api/built-in-javascript-libraries).
 - Instructions on "document.getElementById results to null even if API call successful" fix ( move script from top to near end of body tag) from [Stackoverflow](https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null)
-- The icons in the search results from ![Openweathermap] (https://openweathermap.org/weather-conditions)
+- The icons in the search results from [Openweathermap](https://openweathermap.org/weather-conditions)
 - Code Institute Diploma in Software Development modules Javascript Essentials and Interactive Front End Development, generally all lessons in these modules, for learning about vanilla JavaScript, jQuery and working with external resources such as APIs. 
 
 ### Media
