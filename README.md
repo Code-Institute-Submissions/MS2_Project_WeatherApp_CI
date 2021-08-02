@@ -113,9 +113,11 @@ At the time of writing there are no known bugs, however load time for the infoca
 Deployment of project to a hosting platform (e.g. GitHub) 
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - From Gitpod: commit changes to documents using the terminal, and commands commit -m and "message of commited changes ", git add and git push. Any changes made to the documents will now bepushed to your Github project repository.
   - In the GitHub repository, navigate to the Settings tab 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+  - In Settings, you can find the live page (browser window) dedicated to the project. 
 
 
 ## Credits 
