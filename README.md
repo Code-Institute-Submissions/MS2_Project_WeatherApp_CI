@@ -6,11 +6,28 @@ The overall website look and feel is kept crispy and simple, as the main aim is 
 
 User also has an opportunity to submit a contact form to the developers of this website if they have any questions, which utilises EmailJS service. 
 
-API calls in this project were made using XHR XMLHttpRequest. Whilst this method is now older, and there are newer methods such as Fetch() which can be used, for the purpose of this project and my personal learning outcome the older XMLHttpRequest method was used, and a general purpose was to keep the script code as short and simple as possible, whilst maintaining and ensuring full functionality. The XMLHttpRequest method does have its limitations but there might also be instances where this method would be the preferred option, for more information on this method please visit ![JavaScriptInfo](https://javascript.info/xmlhttprequest#the-basics) or another resource of your choice. 
+API calls in this project were made using XHR XMLHttpRequest. Whilst this method is now older, and there are newer methods such as Fetch() which can be used, for the purpose of this project and my personal learning outcome the older XMLHttpRequest method was used, and a general purpose was to keep the script code as short and simple as possible, whilst maintaining and ensuring full functionality. The XMLHttpRequest method does have its limitations but there might also be instances where this method would be the preferred option, for more information on this method please visit [JavaScriptInfo](https://javascript.info/) or another resource of your choice. 
 
 This project has been created to be submitted as a milestone project 2 for CodeInstitute's Diploma in Software Development course. 
 
 ![Responsive Mockup](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(AmIResponsive)%20(2).png)
+
+# User Experience (UX)
+
+## First Time Visitor Goals
+
+    I want to easily find current weather information.
+    I want to be able to easily and quickly navigate to the search box section.  
+
+## Returning Visitor Goals
+
+    I want to find information quickly.
+    I want to contact the service provider, if I have any questions.
+
+## Frequent User Goals
+
+    I want to find information quickly by searching by city name. 
+  
 
 ## Design
 
@@ -108,7 +125,7 @@ Result: Alert error
 - API tests carried out: Test nr 1 (initially conducted with a different, easier API in order to not use up calls on the free Openweathermap API and risk the provider throttling the key) and API 2 sharp test with the actual Openweathermap API key generated expected results. 
 
 Bugs or problems during testing: 
-- Placement of script tag at the top of the page in the index.html file: Initially an error message for document.getElemenById null was received once the actual searchbox function had been set up. Upon further investigation, a recommendation from a forum in Stackoverflow recommended that the script tag should be moved to the end of the html file, close to the closing body tag. The script tag should be located at the bottom of the html file, otherwise the html file will not have enough time to load.
+- Placement of script tag at the top of the page in the index.html file: Initially an error message for document.getElemenById null was received once the actual searchbox function had been set up. Upon further investigation, a recommendation from a forum in Stackoverflow recommended that the script tag should be moved to the end of the html file, close to the closing body tag. The script tag should be located at the bottom of the html file, otherwise the html file will not have enough time to load. 
 - Alert box: an alert box was set up in the script file in order to catch any mistyped cityname which the user might type in and submit (resulting in no information being displayed in the infocard). The aim was to generate an error alert box propting th user to type in a valid city name after an incorrect submission. During the development phase the error box "fired up" when the submission button was clicked, even if the cityname was correct, results for the city were then displayed correctly so the issue had to be the alert function. Upon further investigation, it was found that the correct placement for this else if - statement was below the actual API call if-function, and in order to work properly it needed to "fire" if the response from the onreadystatechange was 404. The issue with the alertbox is now rectified and the function is working correctly, but there might be an other, more correct way to initialise the alert function. 
 - Temperature data from the API: Results for the temperature are returned with 2 decimals, which is not optimal. For this project temperature displaying a whole number was chosen. In order to achieve this, a math.round command would need to be used in the infocard temperature result section. Unfortunately the developer was unable to get the syntax order right and had to Google the problem. This syntax is now correct and returning a whole number (ie. 25, or 18 etc) with the temperature results. 
 
