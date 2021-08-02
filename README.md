@@ -12,6 +12,22 @@ This project has been created to be submitted as a milestone project 2 for CodeI
 
 ![Responsive Mockup](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(AmIResponsive)%20(2).png)
 
+## Design
+
+- Colour scheme: simple, one main colour for the background, lightblue.
+- Typography: darkgrey for headers and lightgray for subheaders used throughout.
+
+## Wireframes
+
+- Landing page
+
+![Landing Page](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(WireframLandingpage).png)
+
+- Mobile 
+![Landing Page](https://github.com/AnnieBRGit/MS2_Project_WeatherApp_CI/blob/main/images/Screenshot%20(Wireframemobile).png)
+
+- EmailJS contact form was added to the design at a much later stage, and was not initially part of the design. 
+
 ## Features 
 
 Features include: landing page, searchbox, result weather infocard, alert error, contact form using EmailJS and a footer. Each feature is presented in detail in the sections below. 
